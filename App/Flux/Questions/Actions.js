@@ -1,12 +1,12 @@
 import { GET_QUESTIONS } from './Types';
 import apisauce from 'apisauce';
 
-const api = apisauce.create({
-  baseURL: 'https://opentdb.com/api.php?amount=10&difficulty=hard',
-  timeout: 20000
-});
+export const getQuestions = (type) => (dispatch) => {
+  const api = apisauce.create({
+    baseURL: `https://opentdb.com/api.php?amount=10&type=${type}`,
+    timeout: 20000
+  });
 
-export const getQuestions = () => (dispatch) => {
   return api.get().then((result) => {
     const questions = result.data.results.map((item) => {
       return new Promise((resolve) => {
@@ -14,7 +14,7 @@ export const getQuestions = () => (dispatch) => {
 
         resolve({
           ...item,
-          answers: data 
+          answers: data
         });
       });
     });
