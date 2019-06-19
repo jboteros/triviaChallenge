@@ -1,0 +1,52 @@
+{
+  "name": "triviaChallenge",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios --simulator=\"iPhone X\"",
+    "ios5s": "react-native run-ios --simulator=\"iPhone 5s\"",
+    "ios8": "react-native run-ios --simulator=\"iPhone 8\"",
+    "apk": "cd android && ./gradlew assembleRelease",
+    "reset1": "git clean -f -x -d",
+    "reset2": "git checkout -- .",
+    "reset3": "watchman watch-del-all && rm -rf node_modules/ && yarn cache clean && yarn install",
+    "android:devices": "$ANDROID_HOME/platform-tools/adb devices"
+  },
+  "rnpm": {
+    "assets": [
+      "./assets/fonts/"
+    ]
+  },
+  "dependencies": {
+    "@react-native-community/async-storage": "^1.5.0",
+    "apisauce": "^1.0.2",
+    "moment": "^2.24.0",
+    "react": "16.8.3",
+    "react-native": "0.59.9",
+    "react-native-device-info": "^2.1.2",
+    "react-native-htmlview": "^0.14.0",
+    "react-native-linear-gradient": "^2.5.4",
+    "react-native-loader": "^1.2.1",
+    "react-native-snap-carousel": "^3.8.0",
+    "react-navigation": "^2.18.2",
+    "react-redux": "^7.1.0",
+    "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-persist": "^5.10.0",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/runtime": "^7.4.5",
+    "babel-jest": "^24.8.0",
+    "jest": "^24.8.0",
+    "metro-react-native-babel-preset": "^0.54.1",
+    "react-test-renderer": "16.8.3"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
