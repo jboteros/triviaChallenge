@@ -5,7 +5,8 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    width: Metrics.screenWidth
+    width: Metrics.screenWidth,
+    paddingBottom: Metrics.addFooter
   },
   textCategory: {
     fontFamily: Fonts.type.bold,
@@ -69,7 +70,6 @@ export default StyleSheet.create({
     flexWrap: 'wrap',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'green',
     height: Metrics.screenWidth * 0.5
   },
   answerItem: {

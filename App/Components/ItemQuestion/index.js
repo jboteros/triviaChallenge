@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import styles from './styles';
 import HTMLView from 'react-native-htmlview';
 
-export default ({ item, index, selectAnswer }) => {
+export const Item = ({ item, index, onSelect }) => {
+  // export const Item = ({ item, index, onSelect }) => {
   return (
     <View key={`item${index}`} style={styles.container}>
       <View style={styles.categoryContainer}>
@@ -20,14 +21,7 @@ export default ({ item, index, selectAnswer }) => {
             <TouchableOpacity
               key={`item${answer}:${i}`}
               onPress={() => {
-                selectAnswer();
-
-                // if (answer == item.correct_answer) {
-                //   console.log('isOK');
-                // } else {
-                //   validator = 2;
-                //   console.log('isBad');
-                // }
+                onSelect(index, answer, answer == item.correct_answer);
               }}
               style={styles.answerItem}
             >

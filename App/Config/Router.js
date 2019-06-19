@@ -1,15 +1,22 @@
 import { createStackNavigator } from 'react-navigation';
-import Loading from '../Containers/Loading';
-
+import Game from '../Containers/Game';
+import GameOver from '../Containers/GameOver';
+import Welcome from '../Containers/Welcome';
 const AppNavigator = createStackNavigator(
   {
-    Loading: {
-      screen: Loading
+    Welcome: {
+      screen: Welcome
+    },
+    Game: {
+      screen: Game
+    },
+    GameOver: {
+      screen: GameOver
     }
   },
   {
     headerMode: 'none',
-    initialRouteName: 'Loading',
+    initialRouteName: 'Welcome',
     navigationOptions: {
       cardStack: {
         gesturesEnabled: false
