@@ -44,7 +44,7 @@ export default StyleSheet.create({
     fontSize: Fonts.size.medium,
     textAlignVertical: 'center',
     textAlign: 'center',
-    paddingHorizontal: 50
+    paddingHorizontal: 50,marginVertical:10,
   },
   categoryContainer: {
     flex: 1,

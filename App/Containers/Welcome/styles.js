@@ -6,10 +6,11 @@ export default {
     width: Metrics.screenWidth,
     height: Metrics.screenHeight,
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'center'
   },
+  containerItems: { flex: 1, marginTop: Metrics.header, paddingBottom: 10, alignItems: 'center' },
   loading: {
-    backgroundColor: 'rgba(10,3,8,0.8)',
+    backgroundColor: Colors.loader,
     position: 'absolute',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -18,25 +19,35 @@ export default {
     width: Metrics.screenWidth,
     zIndex: 2000
   },
-
-  selectorContainer: { flex: 0, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
-  selectorItem: {
-    width: Metrics.screenWidth * 0.8,
-    height: 30,
-    backgroundColor: 'green',
-    marginVertical: 10,
-    justifyContent: 'center',
-    alignItems: 'center'
+  logo: {
+    width: Metrics.screenWidth * 0.6,
+    height: Metrics.screenWidth * 0.6,
+    resizeMode: 'contain',
+    marginTop: 10
   },
+  selectorContainer: { flex: 0, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginVertical:20 },
+
   welcome: {
     fontFamily: Fonts.type.base,
     color: Colors.dark,
-    marginVertical: 20,
-    fontSize: Fonts.size.medium,
+    marginVertical: 10,
+    marginHorizontal: 20,
+    fontSize: Fonts.size.h6,
     textAlignVertical: 'center',
     textAlign: 'center'
   },
 
+  developed: {
+    fontFamily: Fonts.type.base,
+    color: Colors.dark,
+    marginTop: 10,
+    // marginVertical: 10,
+    marginHorizontal: 20,
+    marginBottom: 30,
+    fontSize: Fonts.size.small,
+    textAlignVertical: 'center',
+    textAlign: 'center'
+  },
   descriptorContainer: {
     flex: 1,
     justifyContent: 'center',
@@ -51,20 +62,20 @@ export default {
     textAlignVertical: 'center',
     textAlign: 'center'
   },
-  playText: {
+  btnText: {
     fontFamily: Fonts.type.bold,
     color: Colors.dark,
     fontSize: Fonts.size.medium,
     textAlignVertical: 'center',
     textAlign: 'center'
   },
-  playContainer: {
+  btnContainer: {
     flex: 0,
     height: 60,
     width: Metrics.screenWidth * 0.8,
     alignSelf: 'center',
     borderRadius: Metrics.borderRadius,
-    marginVertical: Metrics.addFooter,
+    marginVertical: Metrics.addFooter*2,
 
     justifyContent: 'center',
     alignItems: 'center',
@@ -79,67 +90,6 @@ export default {
 
     elevation: 5
   },
-  scoreContainer: {
-    flex: 0,
-    marginVertical: 10,
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  scoreValue: {
-    fontFamily: Fonts.type.bold,
-    color: Colors.dark,
-    fontSize: Fonts.size.h4,
-    textAlignVertical: 'center',
-    textAlign: 'center'
-  },
-  h4: {
-    fontFamily: Fonts.type.bold,
-    color: Colors.dark,
-    fontSize: Fonts.size.h4,
-    textAlignVertical: 'center',
-    textAlign: 'center',
-    paddingHorizontal: 50
-  },
-  p: {
-    fontFamily: Fonts.type.bold,
-    color: Colors.dark,
-    fontSize: Fonts.size.medium,
-    textAlignVertical: 'center',
-    textAlign: 'center',
-    paddingHorizontal: 50,
-    color: Colors.accentColors[2]
-  },
-  _p: {
-    fontFamily: Fonts.type.bold,
-    color: Colors.dark,
-    fontSize: Fonts.size.medium,
-    textAlignVertical: 'center',
-    textAlign: 'center',
-    paddingHorizontal: 50,
-    textDecorationLine: 'line-through',
-    color: Colors.accentColors[1]
-  },
-  answerItem: {
-    alignSelf: 'center',
-    backgroundColor: Colors.background,
-    borderRadius: Metrics.borderRadius,
-    width: Metrics.screenWidth * 0.9,
-    paddingVertical: 10,
-    marginVertical: 5,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 20,
-    shadowColor: Colors.dark,
-    shadowOffset: {
-      width: 2,
-      height: 1
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 1,
-
-    elevation: 5
-  },
-
   linearGradient: {
     flex: 1,
     width: Metrics.screenWidth,

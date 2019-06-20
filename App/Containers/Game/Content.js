@@ -20,7 +20,7 @@ export default class Game extends Component {
   }
 
   async componentDidMount() {
-    const { getQuestions, setLoading , navigation} = this.props;
+    const { getQuestions, setLoading, navigation } = this.props;
     const { type } = navigation.state.params;
 
     console.log('type:Game', type);
@@ -30,7 +30,7 @@ export default class Game extends Component {
   }
 
   async componentWillUnmount() {
-    const { setAnswers, answers, questions, navigation } = this.props;
+    const { setAnswers } = this.props;
     await setAnswers([]);
   }
   async setAnswer(index, answer, response) {
@@ -38,7 +38,6 @@ export default class Game extends Component {
     await setAnswers([...answers, { response, answer }]);
     this._carousel.snapToNext();
     if (questions.questions.length - 1 == answers.length) {
-      console.log('nextScene');
       navigation.navigate('GameOver');
     } else {
     }
@@ -53,6 +52,21 @@ export default class Game extends Component {
         onSelect={(index, answer, response) => {
           this.setAnswer(index, answer, response);
         }}
+      />
+    );
+  }
+
+  get pagination() {
+    const { activeSlide } = this.state;
+    const { questions } = this.props;
+    return (
+      <Pagination
+        dotsLength={questions.questions.length}
+        activeDotIndex={activeSlide}
+        containerStyle={styles.containerPagination}
+        dotStyle={styles.dotStyle}
+        inactiveDotOpacity={0.4}
+        inactiveDotScale={0.6}
       />
     );
   }
@@ -85,6 +99,7 @@ export default class Game extends Component {
           sliderHeight={Metrics.screenHeight - Metrics.header}
           itemHeight={Metrics.screenHeight - Metrics.header}
         />
+        {this.pagination}
         {loading && (
           <View style={styles.loading}>
             <Bubbles size={10} color={Colors.snow} />

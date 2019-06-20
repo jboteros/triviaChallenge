@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, Image, TouchableOpacity, Switch } from 'react-native';
-import { Colors, Metrics, Images } from '../../Themes';
+import { Colors, Images } from '../../Themes';
 import { Bubbles } from 'react-native-loader';
 import LinearGradient from 'react-native-linear-gradient';
 import styles from './styles';
@@ -11,12 +11,6 @@ export default class Welcome extends Component {
     this.state = {
       type: false
     };
-  }
-
-  count() {
-    const { answers } = this.props;
-    const countTrue = answers.filter((response) => response.response === true);
-    return countTrue.length;
   }
 
   render() {
@@ -30,12 +24,10 @@ export default class Welcome extends Component {
         start={{ x: 0, y: 0.0 }}
         end={{ x: 0, y: 1.0 }}
       >
-        <View style={{ flex: 1, marginTop: Metrics.header, alignItems: 'center' }}>
+        <View style={styles.containerItems}>
           <Text style={styles.welcome}>WELCOM TO THE</Text>
-          <Image
-            source={Images.welcome}
-            style={{ width: Metrics.screenWidth * 0.5, height: Metrics.screenWidth * 0.5, resizeMode: 'contain' }}
-          />
+          <Image source={Images.welcome} style={styles.logo} />
+          <Text style={styles.developed}>by Johnatan Botero</Text>
           <View style={styles.descriptorContainer}>
             <Text style={styles.welcome}>You will be presented with 10 questions.</Text>
 
@@ -55,17 +47,15 @@ export default class Welcome extends Component {
             />
             <Text style={styles.selectorText}>True / False</Text>
           </View>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('Game', { type: type ? 'boolean' : 'multiple' });
+            }}
+            style={styles.btnContainer}
+          >
+            <Text style={styles.btnText}>BEGIN</Text>
+          </TouchableOpacity>
         </View>
-        <TouchableOpacity
-          onPress={() => {
-            // option = type ?   'boolean': 'multiple';
-            // console.log('option', option);
-            navigation.navigate('Game', { type: type ? 'boolean' : 'multiple' });
-          }}
-          style={styles.playContainer}
-        >
-          <Text style={styles.playText}>BEGIN</Text>
-        </TouchableOpacity>
 
         {loading && (
           <View style={styles.loading}>

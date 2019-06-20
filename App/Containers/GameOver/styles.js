@@ -8,8 +8,9 @@ export default {
     justifyContent: 'center',
     alignItems: 'center'
   },
+  content: { flex: 1, width: Metrics.screenWidth, paddingBottom: 10 },
   loading: {
-    backgroundColor: 'rgba(10,3,8,0.8)',
+    backgroundColor: Colors.loader,
     position: 'absolute',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -18,6 +19,7 @@ export default {
     width: Metrics.screenWidth,
     zIndex: 2000
   },
+  scrollView:{ flex: 1, marginBottom:5, },
   score: {
     fontFamily: Fonts.type.base,
     color: Colors.dark,

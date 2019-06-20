@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import React from 'react';
+import { View, TouchableOpacity } from 'react-native';
 import styles from './styles';
 import HTMLView from 'react-native-htmlview';
 
 export const Item = ({ item, index, onSelect }) => {
-  // export const Item = ({ item, index, onSelect }) => {
   return (
     <View key={`item${index}`} style={styles.container}>
       <View style={styles.categoryContainer}>
@@ -13,7 +12,6 @@ export const Item = ({ item, index, onSelect }) => {
       </View>
       <View style={styles.questionContainer}>
         <HTMLView value={`<body>${item.question}</body>`} stylesheet={styles} />
-        {false && <View style={{ width: '100%', height: '100%', backgroundColor: 'red', position: 'absolute' }} />}
       </View>
       <View style={styles.answersContainer}>
         {item.answers.map(function(answer, i) {
