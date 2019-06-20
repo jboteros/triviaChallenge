@@ -40,7 +40,6 @@ export default class GameOver extends Component {
           <ScrollView style={styles.scrollView}>
             {questions.questions.map(function(item, index) {
               const { response, answer } = answers[index];
-              // console.log(response, answer);
               return (
                 <View key={`item${item}:${index}`} style={styles.answerItem}>
                   <HTMLView value={`<body>${index + 1}) ${item.question}</body>`} stylesheet={styles} />

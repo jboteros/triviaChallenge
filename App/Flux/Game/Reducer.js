@@ -6,7 +6,6 @@ const initialState = {
 };
 
 const setAnswers = (state = initialState, { payload }) => {
-  console.log('payload:Reducer', payload);
   return {
     ...state,
     answers: payload
