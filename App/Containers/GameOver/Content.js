@@ -30,14 +30,14 @@ export default class GameOver extends Component {
         end={{ x: 0, y: 1.0 }}
       >
         <Header />
-        <View style={{ flex: 1, width: Metrics.screenWidth }}>
+        <View style={styles.content}>
           <View style={styles.scoreContainer}>
             <Text style={styles.score}>Your Score</Text>
             <Text style={styles.scoreValue}>
               {this.count()}/{questions.questions.length}
             </Text>
           </View>
-          <ScrollView style={{ flex: 1 }}>
+          <ScrollView style={styles.scrollView}>
             {questions.questions.map(function(item, index) {
               const { response, answer } = answers[index];
               // console.log(response, answer);

@@ -10,15 +10,23 @@ export default {
     backgroundColor: 'red'
   },
   loading: {
-    backgroundColor: 'rgba(10,3,8,0.8)',
+    backgroundColor: Colors.loader,
     position: 'absolute',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
     height: Metrics.screenHeight,
-    width: Metrics.screenWidth
-    // zIndex: 2000
+    width: Metrics.screenWidth,
+    zIndex: 2000
   },
+  dotStyle: {
+    width: 10,
+    height: 10,
+    borderRadius: 5,
+    marginHorizontal: 8,
+    backgroundColor: 'rgba(255, 255, 255, 0.92)'
+  },
+  containerPagination: { width: Metrics.screenWidth * 0.1, alignSelf: 'center' },
   btnContainer: {
     marginVertical: 5,
     width: Metrics.screenWidth * 0.5,
@@ -43,14 +51,7 @@ export default {
     // backgroundColor: 'purple', // ----------
     justifyContent: 'center'
   },
-  dotContainerStyle: {
-    borderColor: Colors.accentColors[0],
-    borderWidth: 1,
-    width: 6,
-    height: 6,
-    borderRadius: 5,
-    marginRight: 8
-  },
+
   dotStyle: {
     backgroundColor: Colors.accentColors[4],
     width: 6,
