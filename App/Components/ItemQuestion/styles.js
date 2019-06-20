@@ -36,7 +36,7 @@ export default StyleSheet.create({
     fontSize: Fonts.size.h4,
     textAlignVertical: 'center',
     textAlign: 'center',
-    paddingHorizontal: 50
+    paddingHorizontal: 40
   },
   p: {
     fontFamily: Fonts.type.base,
@@ -44,18 +44,18 @@ export default StyleSheet.create({
     fontSize: Fonts.size.medium,
     textAlignVertical: 'center',
     textAlign: 'center',
-    paddingHorizontal: 50,marginVertical:10,
+    paddingHorizontal: 50
   },
   categoryContainer: {
-    flex: 1,
-    justifyContent: 'center',
+    marginTop: 20,
+
     alignItems: 'center',
-    marginVertical: 40
+    flexDirection: 'column'
   },
   questionContainer: {
     flex: 4,
     alignSelf: 'center',
-    marginVertical: 40,
+    marginVertical: 10,
     borderRadius: Metrics.borderRadius,
     width: Metrics.screenWidth * 0.9,
 

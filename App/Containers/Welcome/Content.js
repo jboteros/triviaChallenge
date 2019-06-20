@@ -38,9 +38,7 @@ export default class Welcome extends Component {
             <Switch
               value={this.state.type}
               onValueChange={(value) => {
-                this.setState({ type: value }, () => {
-                  console.log(type);
-                });
+                this.setState({ type: value });
               }}
               value={this.state.type}
               trackColor={Colors.accentColors[1]}

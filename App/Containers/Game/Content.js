@@ -22,8 +22,7 @@ export default class Game extends Component {
   async componentDidMount() {
     const { getQuestions, setLoading, navigation } = this.props;
     const { type } = navigation.state.params;
-
-    console.log('type:Game', type);
+    
     setLoading(true);
     await getQuestions(type);
     setLoading(false);
