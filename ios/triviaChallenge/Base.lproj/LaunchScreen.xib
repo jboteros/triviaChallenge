@@ -26,14 +26,14 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="Eme-Ab-zeh">
                     <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed by Johnatan Botero for" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDp-ww-ezG">
-                    <rect key="frame" x="153" y="380" width="174" height="10"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed by Johnatan Botero" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDp-ww-ezG">
+                    <rect key="frame" x="161.5" y="430" width="157" height="10"/>
                     <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="10"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRIVIA CHALLENGE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mN2-Av-hrL">
-                    <rect key="frame" x="152" y="360.5" width="176" height="17"/>
+                    <rect key="frame" x="152" y="410.5" width="176" height="17"/>
                     <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -45,13 +45,6 @@
                         <constraint firstAttribute="height" constant="200" id="xbA-Cu-8BI"/>
                     </constraints>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logG2i" translatesAutoresizingMaskIntoConstraints="NO" id="niC-pN-Lkj">
-                    <rect key="frame" x="220" y="400" width="40" height="40"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="40" id="NjO-JX-wzh"/>
-                        <constraint firstAttribute="width" constant="40" id="fEP-5m-weJ"/>
-                    </constraints>
-                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -59,12 +52,10 @@
                 <constraint firstItem="Ty1-7J-37w" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="4vv-U3-TgQ"/>
                 <constraint firstItem="Eme-Ab-zeh" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="6Ip-UE-Ljm"/>
                 <constraint firstItem="Ty1-7J-37w" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="IeR-zc-Mhl"/>
-                <constraint firstItem="niC-pN-Lkj" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="N93-FU-KSz"/>
-                <constraint firstAttribute="bottom" secondItem="niC-pN-Lkj" secondAttribute="bottom" constant="40" id="Q1U-1I-Fkc"/>
-                <constraint firstItem="niC-pN-Lkj" firstAttribute="top" secondItem="gDp-ww-ezG" secondAttribute="bottom" constant="10" id="SZr-YK-4tZ"/>
                 <constraint firstItem="Eme-Ab-zeh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="XBs-RT-1lV"/>
                 <constraint firstItem="mN2-Av-hrL" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Xhq-JG-4tR"/>
                 <constraint firstItem="Eme-Ab-zeh" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="dUb-2A-63T"/>
+                <constraint firstAttribute="bottom" secondItem="gDp-ww-ezG" secondAttribute="bottom" constant="40" id="dyM-Zz-lbm"/>
                 <constraint firstAttribute="bottom" secondItem="Eme-Ab-zeh" secondAttribute="bottom" id="jnQ-ol-JLm"/>
                 <constraint firstItem="Eme-Ab-zeh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="kTv-P0-uLL"/>
                 <constraint firstAttribute="trailing" secondItem="Eme-Ab-zeh" secondAttribute="trailing" id="qFk-4B-iZW"/>
@@ -78,6 +69,5 @@
     <resources>
         <image name="Logo" width="1025" height="1025"/>
         <image name="bg" width="1025" height="1025"/>
-        <image name="logG2i" width="128" height="128"/>
     </resources>
 </document>
