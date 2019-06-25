@@ -33,3 +33,13 @@ yarn android
 yarn apk
 ```
 
+If use npm
+
+```
+npm run ios
+npm run ios8
+npm run ios5s
+#or
+npm run android
+npm run apk
+```
